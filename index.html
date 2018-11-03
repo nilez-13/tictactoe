@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Tic tac toe </title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Spicy+Rice');
+	h1,div{font-family: 'Spicy Rice', cursive;}
+		.Square{
+			height: 80px ;
+			width:80px ;
+			font-size: 40pt;
+			text-align: center;
+
+
+
+		}
+		body{
+			width: 500px;
+			margin: auto;
+			background:#EAF2EF;
+			}
+		#message{font-size:18 pt;}
+		#restart {
+			font-size:18 pt;
+			text-decoration: none;
+			color: black;
+			font-family: 'Spicy Rice', cursive;
+		}
+		#dare {
+			font-size: 20pt;
+			text-align: center;
+		}
+	</style>
+</head>
+<body onload="StartGame();">
+	<h1>tic tac toe </h1>
+	<div id="message">message here</div>
+	<table border="1">
+		<tr>
+			<td id="S1" class="Square" onClick="NextMove(this)"></td>
+			<td id="S2" class="Square" onClick="NextMove(this)"></td>
+			<td  id="S3" class="Square" onClick="NextMove(this)"></td>
+
+		</tr>
+		<tr>
+			<td id="S4" class="Square" onClick="NextMove(this)"></td>
+			<td id="S5" class="Square" onClick="NextMove(this)"></td>
+			<td id="S6" class="Square" onClick="NextMove(this)"></td>
+
+		</tr>
+		<tr>
+			<td id="S7" class="Square" onClick="NextMove(this)"></td>
+			<td  id="S8"class="Square" onClick="NextMove(this)"></td>
+			<td id="S9" class="Square" onClick="NextMove(this)"></td>
+
+		</tr>
+	</table>
+	<a href="javascript: StartGame();" id="restart">Start over</a>
+	<p id="dare">
+		
+	</p>
+	<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html> 
