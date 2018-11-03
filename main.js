@@ -11,11 +11,12 @@ function StartGame(){
 
 }
 function NextMove(square){
+	console.log(square.innerHTML)
 	if (document.winner != null) {
 		SetMessage(document.turn + " already won")
 	}
-	else if(square.innerText ==""){
-	square.innerText=document.turn;
+	else if(square.innerHTML ==""){
+	square.innerHTML=document.turn;
 	SwitchTurn();
 }
 else{
@@ -25,11 +26,11 @@ else{
 }
 function SwitchTurn(){
 	var dares = ["dare1","dare2","dare3","dare4","dare5"]
-	var dareno = Math.floor((Math.random() * 4) );
+	var dareno = Math.floor((Math.random() * 5) );
 	if(CheckForWinner(document.turn)){
 		document.winner = document.turn;
 		alert (document.turn +" won.");
-		document.getElementById("dare").innerText= "Loser has to complete this dare: " + dares[dareno] ;
+		document.getElementById("dare").innerHTML= "Loser has to complete this dare: " + dares[dareno] ;
 	}
 
 	else if(document.turn == "x"){
@@ -41,7 +42,7 @@ function SwitchTurn(){
 		SetMessage("its  "+ document.turn+"'s turn")
 }
 function SetMessage(msg){
-	document.getElementById("message").innerText=msg ;
+	document.getElementById("message").innerHTML=msg ;
 }
 
 function CheckForWinner(move){
@@ -68,9 +69,9 @@ return result;
 }
 function GetBox (number)
 {
-	 return document.getElementById("S"+number).innerText;
+	 return document.getElementById("S"+number).innerHTML;
 }
 
 function clearBox (number){
-	document.getElementById("S"+number).innerText ="";
+	document.getElementById("S"+number).innerHTML ="";
 }
