@@ -6,7 +6,7 @@ function StartGame(){
 
 	document.turn="x";
 	document.winner = null;
-	
+	document.getElementById("dare").innerHTML=""
 	SetMessage(document.turn +"  gets to start game")
 
 }
